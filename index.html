@@ -3,50 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join Telegram | Trading Community</title>
+<title>Intraday Match | SEBI Registered</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
 }
 
 body{
-  background:#f4f7fb;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
-
-/* Main Wrapper */
-.container{
-  background:#ffffff;
-  max-width:420px;
-  width:95%;
-  padding:24px 18px 30px;
+  background:#f5f8fb;
   text-align:center;
-  border-radius:18px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.08);
-  animation: zoomPulse 3s ease-in-out infinite;
+  color:#111;
 }
 
-/* Zoom In Zoom Out Animation */
-@keyframes zoomPulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.05)}
-  100%{transform:scale(1)}
-}
-
-/* Top Bar */
+/* Top info bar */
 .top{
   background:#d9f0ff;
-  padding:10px;
+  padding:12px;
   font-size:14px;
-  border-radius:10px;
-  margin-bottom:16px;
 }
 .top a{
   color:#0066cc;
@@ -54,150 +31,195 @@ body{
   text-decoration:none;
 }
 
-/* Profile Image */
+/* Profile section */
+.profile{
+  margin-top:35px;
+}
 .profile img{
-  width:96px;
-  height:96px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   object-fit:cover;
-  margin:14px auto;
-  display:block;
-  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+  animation: zoomPulse 3s ease-in-out infinite;
 }
 
-/* Headings */
+/* Zoom animation */
+@keyframes zoomPulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+/* Instagram-style info box */
+.insta-box{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 14px;
+  border:2px solid #1e88ff;
+  border-radius:10px;
+  font-size:13px;
+  background:#fff;
+}
+.insta-box b{
+  display:block;
+}
+
+/* Main heading */
 h1{
-  font-size:26px;
-  color:#007bff;
+  margin-top:25px;
+  font-size:30px;
+  color:#1e88ff;
   font-weight:800;
-  margin-bottom:4px;
 }
+
+/* SEBI line */
 .sebi{
-  font-size:14px;
-  font-weight:700;
-  color:#007bff;
-  margin-bottom:14px;
-}
-.sub{
+  margin-top:10px;
   font-size:16px;
-  margin-bottom:6px;
+  font-weight:700;
+  color:#1e88ff;
 }
-.hl{
-  color:#0a7d00;
+
+/* Sub text */
+.sub{
+  margin-top:20px;
+  font-size:18px;
+}
+.sub span{
+  color:#1e88ff;
   font-weight:800;
-  margin-bottom:16px;
 }
+
+/* Highlight line */
+.hl{
+  margin-top:10px;
+  font-size:18px;
+  font-weight:800;
+  color:#0a7d00;
+}
+
+/* Subscriber count */
 .count{
-  font-size:20px;
+  margin-top:18px;
+  font-size:22px;
   font-weight:900;
-  margin:14px 0;
 }
 
 /* Points */
-ul{
-  list-style:none;
-  margin:16px 0;
+.points{
+  margin-top:20px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
 }
-ul li{
-  font-size:15px;
-  margin-bottom:10px;
+.points p{
+  margin-bottom:12px;
+  font-size:16px;
 }
-ul li::before{
+.points p::before{
   content:"✅ ";
 }
 
-/* Button */
+/* CTA button */
 .btn{
-  display:block;
-  background:linear-gradient(135deg,#0a84ff,#005eff);
+  margin-top:25px;
+  display:inline-block;
+  background:#0a84ff;
   color:#fff;
-  padding:16px;
+  padding:16px 50px;
   border-radius:50px;
-  font-weight:800;
   font-size:16px;
+  font-weight:800;
   text-decoration:none;
   box-shadow:0 12px 25px rgba(0,132,255,.35);
-  margin:20px auto 12px;
-  transition:transform .2s ease;
+  animation: zoomBtn 2.5s ease-in-out infinite;
 }
-.btn:hover{
-  transform:scale(1.05);
+
+@keyframes zoomBtn{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+  100%{transform:scale(1)}
 }
 
 /* Timer */
 .timer{
-  color:#e00000;
+  margin-top:15px;
+  font-size:15px;
   font-weight:800;
-  font-size:14px;
-  margin-top:10px;
+  color:#e00000;
 }
 
 /* Footer */
 .footer{
-  font-size:12px;
-  margin-top:18px;
-  color:#333;
+  margin-top:28px;
+  font-size:14px;
 }
 
 /* Mobile */
-@media(max-width:480px){
-  h1{font-size:23px}
-  .count{font-size:18px}
+@media(max-width:600px){
+  h1{font-size:26px}
+  .count{font-size:20px}
+  .btn{width:90%}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="top">
+  Don't have Telegram yet? <a href="https://t.me/+qZKXrtNYuok3MGQ1" target="_blank">Try it now</a>
+</div>
 
-  <div class="top">
-    Don’t have Telegram yet? 
-    <a href="https://telegram.org/" target="_blank">Try it now</a>
-  </div>
+<div class="profile">
+  <img src="https://thinkbigx.sbs/image/traddee.jpg" alt="Profile">
+</div>
 
-  <div class="profile">
-    <img src="https://thinkbigx.sbs/image/traddee.jpg" alt="Profile">
-  </div>
+<div class="insta-box">
+  <b>Trade With Rohan</b>
+  SEBI Registered Research Analyst  
+  <br>Reg No: NH000019026
+</div>
 
-  <h1>Trade With Rohan</h1>
-  <div class="sebi">SEBI Registration No: INH000019026</div>
+<h1>INTRADAY MATCH</h1>
 
-  <div class="sub">Learn Trading with <b>SEBI Registered Guidance</b></div>
-  <div class="hl">Options Trading Ab Rocket Science Nahi!</div>
+<div class="sebi">(SEBI REGISTERED NH000019026)</div>
 
-  <div class="count">65,765+ Subscribers</div>
+<div class="sub">
+  Learn how to Trade with <span>INTRADAY MATCH™</span> Experts
+</div>
 
-  <ul>
-    <li>SEBI Registered – Trading with Trust</li>
-    <li>Daily Nifty, BankNifty & Options Insights</li>
-    <li>One-Stop Destination for Serious Traders</li>
-  </ul>
+<div class="hl">Options Trading Ab Rocket Science Nahi!</div>
 
-  <a class="btn" href="https://t.me/+qZKXrtNYuok3MGQ1">
-    🚀 JOIN TELEGRAM NOW
-  </a>
+<div class="count">7,00,000+ Subscribers</div>
 
-  <div class="timer">
-    <span id="time">01 : 00</span> ⏳ Time is Running Out!
-  </div>
+<div class="points">
+  <p>SEBI Registered – Ab Trading Mein Bharosa Pakka</p>
+  <p>Roz Milenge Nifty, Banknifty, Stock & Options ke Verified Signals</p>
+  <p>One-Stop Destination for Serious Traders in India</p>
+</div>
 
-  <div class="footer">
-    If you already have Telegram, you can join instantly ❤️
-  </div>
+<a class="btn" href="https://t.me/+qZKXrtNYuok3MGQ1">
+  Join Telegram Now
+</a>
 
+<div class="timer">
+  <span id="time">00 : 58</span> ⏳ Time is Running Out!
+</div>
+
+<div class="footer">
+  If you have Telegram you can view and join instantly ❤️
 </div>
 
 <script>
-let seconds = 60;
-const timer = document.getElementById("time");
+let sec = 58;
+const t = document.getElementById("time");
 
 setInterval(()=>{
-  if(seconds>0){
-    seconds--;
-    timer.innerHTML = "00 : " + String(seconds).padStart(2,"0");
+  if(sec>0){
+    sec--;
+    t.innerHTML="00 : "+String(sec).padStart(2,"0");
   }else{
-    window.location.href = "https://t.me/+qZKXrtNYuok3MGQ1";
+    window.location.href="https://t.me/+qZKXrtNYuok3MGQ1";
   }
 },1000);
 </script>
