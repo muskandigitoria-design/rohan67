@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Telegram | Trading Community</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+/* Main Wrapper */
+.container{
+  background:#ffffff;
+  max-width:420px;
+  width:95%;
+  padding:24px 18px 30px;
+  text-align:center;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  animation: zoomPulse 3s ease-in-out infinite;
+}
+
+/* Zoom In Zoom Out Animation */
+@keyframes zoomPulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+/* Top Bar */
+.top{
+  background:#d9f0ff;
+  padding:10px;
+  font-size:14px;
+  border-radius:10px;
+  margin-bottom:16px;
+}
+.top a{
+  color:#0066cc;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* Profile Image */
+.profile img{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:14px auto;
+  display:block;
+  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Headings */
+h1{
+  font-size:26px;
+  color:#007bff;
+  font-weight:800;
+  margin-bottom:4px;
+}
+.sebi{
+  font-size:14px;
+  font-weight:700;
+  color:#007bff;
+  margin-bottom:14px;
+}
+.sub{
+  font-size:16px;
+  margin-bottom:6px;
+}
+.hl{
+  color:#0a7d00;
+  font-weight:800;
+  margin-bottom:16px;
+}
+.count{
+  font-size:20px;
+  font-weight:900;
+  margin:14px 0;
+}
+
+/* Points */
+ul{
+  list-style:none;
+  margin:16px 0;
+}
+ul li{
+  font-size:15px;
+  margin-bottom:10px;
+}
+ul li::before{
+  content:"✅ ";
+}
+
+/* Button */
+.btn{
+  display:block;
+  background:linear-gradient(135deg,#0a84ff,#005eff);
+  color:#fff;
+  padding:16px;
+  border-radius:50px;
+  font-weight:800;
+  font-size:16px;
+  text-decoration:none;
+  box-shadow:0 12px 25px rgba(0,132,255,.35);
+  margin:20px auto 12px;
+  transition:transform .2s ease;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* Timer */
+.timer{
+  color:#e00000;
+  font-weight:800;
+  font-size:14px;
+  margin-top:10px;
+}
+
+/* Footer */
+.footer{
+  font-size:12px;
+  margin-top:18px;
+  color:#333;
+}
+
+/* Mobile */
+@media(max-width:480px){
+  h1{font-size:23px}
+  .count{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="top">
+    Don’t have Telegram yet? 
+    <a href="https://telegram.org/" target="_blank">Try it now</a>
+  </div>
+
+  <div class="profile">
+    <img src="https://thinkbigx.sbs/image/traddee.jpg" alt="Profile">
+  </div>
+
+  <h1>Trade With Rohan</h1>
+  <div class="sebi">SEBI Registration No: INH000019026</div>
+
+  <div class="sub">Learn Trading with <b>SEBI Registered Guidance</b></div>
+  <div class="hl">Options Trading Ab Rocket Science Nahi!</div>
+
+  <div class="count">65,765+ Subscribers</div>
+
+  <ul>
+    <li>SEBI Registered – Trading with Trust</li>
+    <li>Daily Nifty, BankNifty & Options Insights</li>
+    <li>One-Stop Destination for Serious Traders</li>
+  </ul>
+
+  <a class="btn" href="https://t.me/+qZKXrtNYuok3MGQ1">
+    🚀 JOIN TELEGRAM NOW
+  </a>
+
+  <div class="timer">
+    <span id="time">01 : 00</span> ⏳ Time is Running Out!
+  </div>
+
+  <div class="footer">
+    If you already have Telegram, you can join instantly ❤️
+  </div>
+
+</div>
+
+<script>
+let seconds = 60;
+const timer = document.getElementById("time");
+
+setInterval(()=>{
+  if(seconds>0){
+    seconds--;
+    timer.innerHTML = "00 : " + String(seconds).padStart(2,"0");
+  }else{
+    window.location.href = "https://t.me/+qZKXrtNYuok3MGQ1";
+  }
+},1000);
+</script>
+
+</body>
+</html>
